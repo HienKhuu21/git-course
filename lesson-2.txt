@@ -1,0 +1,15 @@
+1.
+	- git init - khởi tạo thư mục Git ở local
+
+	- git add <file_name> - add 1 file vào staging
+
+	- git add . - add tất cả file vào staging
+
+	- git commit -m "<message>" - đưa file đã add từ staging vào repository
+
+2. 
+
+	- Local area: step a, step b
+	- staging area: step d, step f
+	- Repository: step c, step e
+	
