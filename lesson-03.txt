@@ -1,0 +1,103 @@
+EX1:
+    git commit --amend - mở cái editor của commit trước đó
+
+    git commit --amend -m”<message>” - edit message của commit trước đó
+
+    git restore --staged <file> - move file chỉ định về staging
+
+    git reset HEAD~1 - move commit trước đó về working directory
+
+EX2:
+
+    a: Tạo 3 file:
+        Local: file1, file2, file3
+        working directory:
+        staging:
+        repository:
+
+    b: git init
+        Local:
+        working directory: file1, file2, file3
+        staging:
+        repository:
+
+    c: git commit -m”init project”
+        Local:
+        working directory: file1, file2, file3
+        staging: 
+        repository:
+
+        message = init project
+
+    d: git add file1
+        Local:
+        working directory: file2, file3
+        staging: file1
+        repository:
+
+    e: git commit -m”add file”
+        Local:
+        working directory: file2, file3
+        staging:
+        repository: file1
+        
+        message = add file
+
+    f: git add .
+        Local:
+        working directory: 
+        staging: file2, file3
+        repository: file1
+
+    g: git restore --staged file2
+        Local:
+        working directory: file2
+        staging: file3
+        repository: file1
+
+    h: git commit -m”add all files”
+        Local:
+        working directory: file2
+        staging: 
+        repository: file1, file3
+
+        message = add all files
+    
+    i: git reset HEAD~1
+        Local:
+        working directory: file2, file3
+        staging: 
+        repository: file1
+
+EX3:
+    a: git init
+        Local: 
+        working directory:
+        staging:
+        repository:
+
+    b: Tạo file file1.txt, file2.txt, oops/file3.txt
+        Local:
+        working directory: file1.txt, file2.txt, oops/file3.txt
+        staging:
+        repository:
+
+    c: Thêm file .gitignore, thêm vào 2 dòng - file1.txt | oops/
+        Local:
+        working directory: file1.txt, file2.txt, oops/file3.txt
+        staging: 
+        repository:
+
+    d: git add .
+        Local:
+        working directory: file1.txt, oops/file3.txt
+        staging: file2.txt
+        repository:
+
+    e: git commit -m"init project"
+        Local:
+        working directory: file1.txt, oops/file3.txt
+        staging:
+        repository: file2.txt
+        
+        message = init project
