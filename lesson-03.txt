@@ -1,5 +1,5 @@
 EX1:
-    git commit --amend - mở cái editor của commit trước đó
+    git commit --amend - dùng để edit nội dung hoặc thông điệp của commit
 
     git commit --amend -m”<message>” - edit message của commit trước đó
 
@@ -83,20 +83,20 @@ EX3:
         repository:
 
     c: Thêm file .gitignore, thêm vào 2 dòng - file1.txt | oops/
-        Local:
-        working directory: file1.txt, file2.txt, oops/file3.txt
+        Local: file1.txt, oops/file3.txt
+        working directory: file2.txt
         staging: 
         repository:
 
     d: git add .
-        Local:
-        working directory: file1.txt, oops/file3.txt
+        Local: file1.txt, oops/file3.txt
+        working directory: 
         staging: file2.txt
         repository:
 
     e: git commit -m"init project"
-        Local:
-        working directory: file1.txt, oops/file3.txt
+        Local: file1.txt, oops/file3.txt
+        working directory: 
         staging:
         repository: file2.txt
         
