@@ -82,22 +82,28 @@ EX3:
         staging:
         repository:
 
-    c: Thêm file .gitignore, thêm vào 2 dòng - file1.txt | oops/
-        Local: file1.txt, oops/file3.txt
-        working directory: file2.txt
-        staging: 
-        repository:
+    c: 
+        1. Thêm file .gitignore
+            Local: file1.txt, oops/file3.txt
+            working directory: file2.txt, .gitignore
+            staging: 
+            repository:
+        2. Thêm vào 2 dòng - file1.txt | oops/
+            Local: file1.txt, oops/file3.txt
+            working directory: file2.txt, .gitignore
+            staging: 
+            repository:
 
     d: git add .
         Local: file1.txt, oops/file3.txt
         working directory: 
-        staging: file2.txt
+        staging: file2.txt, .gitignore
         repository:
 
     e: git commit -m"init project"
-        Local: file1.txt, oops/file3.txt
+        Local: file1.txt, oops/file3.txt, .gitignore
         working directory: 
         staging:
-        repository: file2.txt
+        repository: file2.txt, .gitignore
         
         message = init project
